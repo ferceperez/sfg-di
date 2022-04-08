@@ -17,9 +17,8 @@ public class SfgDiApplication {
 
 		MyController myController = (MyController) ctx.getBean("myController"); // no hace falta crear el objecto controller,  nunca se usa el new, el appcontext nos trae el bean
 
-		String greeting = myController.sayHello();
-
-		System.out.println(greeting);
+		System.out.println("------------ Primary Bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("------------ Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController"); //para traer el bean hace falta decirle a spring cual es el controlador con @Controller
