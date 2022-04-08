@@ -22,21 +22,15 @@ public class SfgDiApplication {
 		System.out.println(greeting);
 
 		System.out.println("------------ Property");
-
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController"); //para traer el bean hace falta decirle a spring cual es el controlador con @Controller
-
 		System.out.println(propertyInjectedController.getGreeting());
 
 		System.out.println("------------ Setter");
-
 		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
-
 		System.out.println(setterInjectedController.getGreeting());
 
 		System.out.println("------------ Constructor");
-
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
-
 		System.out.println(constructorInjectedController.getGreeting());
 
 	}

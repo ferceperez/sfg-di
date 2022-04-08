@@ -2,9 +2,7 @@ package zeus.springframework.sfgdi.Controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zeus.springframework.sfgdi.services.GreetingServiceImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
+import zeus.springframework.sfgdi.services.ConstructorGreetingService;
 
 class SetterInjectedControllerTest //ejemplo de depency injection sin usar spring
 {
@@ -14,7 +12,7 @@ class SetterInjectedControllerTest //ejemplo de depency injection sin usar sprin
     void setUp()
     {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl()); //aqui mi clase controlador esta inyectando mis dependencias, pero usando un set para inyectarlas
+        controller.setGreetingService(new ConstructorGreetingService()); //aqui mi clase controlador esta inyectando mis dependencias, pero usando un set para inyectarlas
     }
 
     @Test

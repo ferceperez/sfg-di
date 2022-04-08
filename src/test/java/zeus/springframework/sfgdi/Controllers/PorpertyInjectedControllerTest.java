@@ -2,7 +2,7 @@ package zeus.springframework.sfgdi.Controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zeus.springframework.sfgdi.services.GreetingServiceImpl;
+import zeus.springframework.sfgdi.services.ConstructorGreetingService;
 
 class PorpertyInjectedControllerTest //ejemplo de depency injection sin usar spring
 {
@@ -13,7 +13,7 @@ class PorpertyInjectedControllerTest //ejemplo de depency injection sin usar spr
     {
         controller = new PropertyInjectedController(); //aqui mi clase controlador esta inyectando mis dependencias en las propiedades
 
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
     }
 
     @Test
