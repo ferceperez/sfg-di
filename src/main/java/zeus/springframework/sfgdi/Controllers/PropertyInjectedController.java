@@ -5,16 +5,10 @@ import org.springframework.stereotype.Controller;
 import zeus.springframework.sfgdi.services.GreetingService;
 
 @Controller
-public class SetterInjectedController //ejemplo de depency injection sin usar spring,
+public class PropertyInjectedController //ejemplo de depency injection sin usar spring, creo el controlador que va hacer una inyeccion de dependencias en las propiedades
 {
-
-    private GreetingService greetingService;
-
     @Autowired //necesito decirle a Spring que quiero una instancia del servicio
-    public void setGreetingService(GreetingService greetingService) // creo el controlador que va hacer una inyeccion de dependencias pero con setter
-    {
-        this.greetingService = greetingService;
-    }
+    public GreetingService greetingService;
 
     public String getGreeting()
     {
